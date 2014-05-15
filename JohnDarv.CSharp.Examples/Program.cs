@@ -11,6 +11,7 @@ namespace JohnDarv.CSharp.Examples
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World from a checked in Git repo!!");
         }
     }
 }
