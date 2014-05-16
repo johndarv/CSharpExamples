@@ -12,6 +12,7 @@ namespace JohnDarv.CSharp.Examples
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello World from a checked in Git repo!!");
+            Console.WriteLine("More changes, this time done at work.");
         }
     }
 }
