@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JohnDarv.CSharpExamples.BigMassiveRocket
+namespace JohnDarv.CSharp.Examples.BigMassiveRocket
 {
     class Program
     {

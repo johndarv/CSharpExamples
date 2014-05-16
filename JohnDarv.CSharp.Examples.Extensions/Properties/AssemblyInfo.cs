@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JohnDarv.CSharpExamples.BigMassiveRocket")]
+[assembly: AssemblyTitle("JohnDarv.CSharp.Examples.Extensions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("JohnDarv.CSharpExamples.BigMassiveRocket")]
+[assembly: AssemblyProduct("JohnDarv.CSharp.Examples.Extensions")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1fb6eafa-be4d-410b-9137-e837fb74c5a9")]
+[assembly: Guid("9f7bfa63-5ac4-43ee-aff4-43a4ed91af33")]
 
 // Version information for an assembly consists of the following four values:
 //
