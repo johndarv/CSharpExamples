@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace JohnDarv.CSharp.Examples.MutexProgram
+namespace JohnDarv.CSharp.Examples.Mutexes
 {
-    public sealed class MutexTester : IDisposable
+    public sealed class MutexMonopolizer : IDisposable
     {
         private readonly string name; 
         private readonly string uniqueMutexName;
         private Mutex mutex;
 
-        public MutexTester(string name, string uniqueMutexName)
+        public MutexMonopolizer(string name, string uniqueMutexName)
         {
             this.name = name;
             this.uniqueMutexName = uniqueMutexName;

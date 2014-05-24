@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace JohnDarv.CSharp.Examples.MutexProgram
+namespace JohnDarv.CSharp.Examples.Mutexes
 {
     class Program
     {
@@ -13,7 +12,7 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
 
         static void Main(string[] args)
         {
-            using (MutexTester mutexTester = new MutexTester(SetMutexTesterName(args), uniqueMutexName))
+            using (MutexMonopolizer mutexTester = new MutexMonopolizer(SetMutexTesterName(args), uniqueMutexName))
             {
                 mutexTester.OnlyMutexTesterRunning();
 
@@ -44,7 +43,7 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
             }
             else
             {
-                return "MutexTester" + DateTime.Now.Ticks;
+                return "MutexMonopolizer" + DateTime.Now.Ticks;
             }
         }
     }
