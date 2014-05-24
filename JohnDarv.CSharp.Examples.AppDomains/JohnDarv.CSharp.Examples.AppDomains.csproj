@@ -47,6 +47,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JohnDarv.CSharp.Examples.Mutexes\JohnDarv.CSharp.Examples.Mutexes.csproj">
+      <Project>{cca93b78-23fe-4055-a4dd-b8b1466f461d}</Project>
+      <Name>JohnDarv.CSharp.Examples.Mutexes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
