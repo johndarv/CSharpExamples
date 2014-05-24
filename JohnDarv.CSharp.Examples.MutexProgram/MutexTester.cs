@@ -9,11 +9,13 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
 {
     public sealed class MutexTester : IDisposable
     {
+        private readonly string name; 
         private readonly string uniqueMutexName;
         private Mutex mutex;
 
-        public MutexTester(string uniqueMutexName)
+        public MutexTester(string name, string uniqueMutexName)
         {
+            this.name = name;
             this.uniqueMutexName = uniqueMutexName;
         }
 
@@ -25,35 +27,35 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
             }
             catch (WaitHandleCannotBeOpenedException)
             {
-                Console.WriteLine("This is the only MutexTester running on this computer.");
+                Console.WriteLine("'{0}' is the only MutexTester running on this computer.", this.name);
 
                 this.mutex = new Mutex(false, uniqueMutexName);
 
                 return true;
             }
 
-            Console.WriteLine("There is another Mutex Example Program running on this computer.");
+            Console.WriteLine("There is another MutexTester running on this computer.");
 
             return false;
         }
 
         public void TryMonopoilzeMutex(TimeSpan timespan)
         {
-            Console.WriteLine("Trying to Monopolize Mutex...");
+            Console.WriteLine("'{0}' is trying to monopolize the Mutex...", this.name);
             bool wasAbleToMonopolize = this.mutex.WaitOne(0);
 
             if (wasAbleToMonopolize)
             {
-                Console.WriteLine("I got a signal! Waiting for {0} seconds...", timespan.Seconds);
+                Console.WriteLine("'{0}' got a signal! Waiting for {1} seconds...", this.name, timespan.Seconds);
 
                 Thread.Sleep(timespan);
 
-                Console.WriteLine("Releasing Mutex now!");
+                Console.WriteLine("'{0}' is releasing the Mutex now!", this.name);
                 this.mutex.ReleaseMutex();
             }
             else
             {
-                Console.WriteLine("Another program has the signal for now...");
+                Console.WriteLine("Another MutexTester has the signal right now...");
             }
         }
 

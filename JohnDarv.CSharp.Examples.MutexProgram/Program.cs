@@ -11,11 +11,9 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
     {
         private const string uniqueMutexName = "MutexExample";
 
-        private static Mutex mutex;
-
         static void Main(string[] args)
         {
-            using (MutexTester mutexTester = new MutexTester(uniqueMutexName))
+            using (MutexTester mutexTester = new MutexTester(SetMutexTesterName(args), uniqueMutexName))
             {
                 mutexTester.OnlyMutexTesterRunning();
 
@@ -35,6 +33,18 @@ namespace JohnDarv.CSharp.Examples.MutexProgram
                         mutexTester.TryMonopoilzeMutex(TimeSpan.FromSeconds(seconds));
                     }
                 }
+            }
+        }
+
+        private static string SetMutexTesterName(string[] args)
+        {
+            if (args.Length > 0)
+            {
+                return args[0];
+            }
+            else
+            {
+                return "MutexTester" + DateTime.Now.Ticks;
             }
         }
     }
