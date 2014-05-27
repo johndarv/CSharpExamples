@@ -34,7 +34,7 @@ namespace JohnDarv.CSharp.Examples.Mutexes
                 return true;
             }
 
-            Console.WriteLine("There is another MutexTester running on this computer.");
+            Console.WriteLine("'{0}' detects that there is another MutexTester running on this computer.", this.name);
 
             return false;
         }
@@ -55,7 +55,7 @@ namespace JohnDarv.CSharp.Examples.Mutexes
             }
             else
             {
-                Console.WriteLine("Another MutexTester has the signal right now...");
+                Console.WriteLine("'{0}' detects that another MutexMonopolizer has the signal right now...", this.name);
             }
         }
 
