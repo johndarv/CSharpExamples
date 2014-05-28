@@ -31,9 +31,9 @@ namespace JohnDarv.CSharp.Examples.AppDomains
             // Start all of the MutexMonopolizers in all the different AppDomains
             // The Thread.Sleeps seem to be necessary to stop the threads starting in a random order (?!)
             thread1.Start();
-            Thread.Sleep(TimeSpan.FromSeconds(0.01));
+            Thread.Sleep(TimeSpan.FromSeconds(0.25));
             thread2.Start();
-            Thread.Sleep(TimeSpan.FromSeconds(0.01));
+            Thread.Sleep(TimeSpan.FromSeconds(0.25));
             thread3.Start();
 
             Console.ReadLine();
