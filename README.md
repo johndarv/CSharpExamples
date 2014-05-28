@@ -7,3 +7,4 @@ Other ideas for examples:
 
 - Async Wait
 - CancellationTokens
+- Lazy initialisation
