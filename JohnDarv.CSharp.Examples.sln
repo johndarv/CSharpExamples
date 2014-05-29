@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
+# Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples", "JohnDarv.CSharp.Examples\JohnDarv.CSharp.Examples.csproj", "{DBA261FE-CE25-4B64-889F-2A7FF2630A00}"
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.Mutexes", "JohnDarv.CSharp.Examples.Mutexes\JohnDarv.CSharp.Examples.Mutexes.csproj", "{CCA93B78-23FE-4055-A4DD-B8B1466F461D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.LazyInitialization", "JohnDarv.CSharp.Examples.LazyInitialization\JohnDarv.CSharp.Examples.LazyInitialization.csproj", "{372B98D9-3180-4854-9F04-652D962F94F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.EventWaitHandles", "JohnDarv.CSharp.Examples.EventWaitHandles\JohnDarv.CSharp.Examples.EventWaitHandles.csproj", "{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{372B98D9-3180-4854-9F04-652D962F94F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{372B98D9-3180-4854-9F04-652D962F94F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{372B98D9-3180-4854-9F04-652D962F94F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
