@@ -9,3 +9,5 @@ Other ideas for examples:
 - CancellationTokens
 - Lazy initialisation (needs completing)
 - By ref and By val
+- Data Binding
+- Design Patterns?
