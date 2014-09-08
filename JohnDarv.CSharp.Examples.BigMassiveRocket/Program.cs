@@ -12,10 +12,19 @@ namespace JohnDarv.CSharp.Examples.BigMassiveRocket
         {
             BigMassiveRocket rocket = new BigMassiveRocket();
 
-            ButtonPushHandler handler = rocket.Launch;
+            BigRedButton redButton = new BigRedButton();
+            BigBlueButton blueButton = new BigBlueButton();
+            
+            // Here we can subscribe to the OnButtonPush event from outside of the class, because the event is public.
+            // HOWEVER we do not have permissions to call redButton.OnButtonPush() to invoke all subscribers.
+            // The ability to invoke like this is nicely hidden away within the class.
+            redButton.OnButtonPush += rocket.Launch;
 
-            BigRedButton button = new BigRedButton();
-            button.RegisterHandler(handler);
+            // Here we have had to use a RegisterHandler method to separate the private delegate away from anything outside of the class.
+            // If we had made blueButton.onButtonPush public, then we would be able to invoke it with blueButton.OnButtonPush().
+            // This is the main difference between events and delegates. Events provide a nice clean way of hiding the ability to invoke
+            // from anything outside of the "publisher" class. This is similar to the way that properties differ from fields.
+            blueButton.RegisterHandler(rocket.Launch);
 
             string input = string.Empty;
 
@@ -25,7 +34,7 @@ namespace JohnDarv.CSharp.Examples.BigMassiveRocket
                 input = Console.ReadLine();
                 if (input == "push")
                 {
-                    button.Push();
+                    redButton.Push();
                 }
             }
         }
@@ -33,18 +42,41 @@ namespace JohnDarv.CSharp.Examples.BigMassiveRocket
 
     delegate void ButtonPushHandler();
 
-    class BigRedButton
+    /// <summary>
+    /// A class that demonstrates delegates.
+    /// <remarks>
+    /// /// It implements IButtonThatUsesDelegates to demonstrate that we can't specify delegate instances in interfaces, we have to
+    /// use a method instead.
+    /// </remarks>
+    /// </summary>
+    class BigBlueButton : IButton, IButtonThatUsesDelegates
     {
-        private event ButtonPushHandler OnButtonPush;
+        private ButtonPushHandler onButtonPush;
 
         public void RegisterHandler(ButtonPushHandler handler)
         {
-            OnButtonPush += handler;
+            this.onButtonPush += handler;
         }
 
         public void Push()
         {
-            OnButtonPush();
+            this.onButtonPush();
+        }
+    }
+
+    /// <summary>
+    /// A class that demonstrates events.
+    /// <remarks>
+    /// It implements IButtonThatUsesEvents to demonstrate that events can be specified in interfaces.
+    /// <remarks>
+    /// </summary>
+    class BigRedButton : IButton, IButtonThatUsesEvents
+    {
+        public event ButtonPushHandler OnButtonPush;
+
+        public void Push()
+        {
+            this.OnButtonPush();
         }
     }
 
@@ -54,5 +86,20 @@ namespace JohnDarv.CSharp.Examples.BigMassiveRocket
         {
             Console.WriteLine("Launching Big Massive Rocket!!");
         }
+    }
+
+    interface IButtonThatUsesEvents
+    {
+        event ButtonPushHandler OnButtonPush;
+    }
+
+    interface IButtonThatUsesDelegates
+    {
+        void RegisterHandler(ButtonPushHandler handler);
+    }
+
+    interface IButton
+    {
+        void Push();
     }
 }
