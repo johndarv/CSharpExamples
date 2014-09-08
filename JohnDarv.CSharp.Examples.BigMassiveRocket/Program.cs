@@ -26,17 +26,38 @@ namespace JohnDarv.CSharp.Examples.BigMassiveRocket
             // from anything outside of the "publisher" class. This is similar to the way that properties differ from fields.
             blueButton.RegisterHandler(rocket.Launch);
 
+            Console.WriteLine("You are in a dark room. There is a big red button and a big blue button.");
+            
+            TypeIntructions();
+
+            ReceiveInput(redButton, blueButton);
+        }
+
+        private static void ReceiveInput(BigRedButton redButton, BigBlueButton blueButton)
+        {
             string input = string.Empty;
 
             while (input != "quit" && input != "q")
             {
-                Console.WriteLine("You are in a dark room. There is a big red button. Type \"push\" to push the big red button.");
                 input = Console.ReadLine();
-                if (input == "push")
+                if (input == "push red")
                 {
                     redButton.Push();
                 }
+                else if (input == "push blue")
+                {
+                    blueButton.Push();
+                }
+                else
+                {
+                    TypeIntructions();
+                }
             }
+        }
+
+        private static void TypeIntructions()
+        {
+            Console.WriteLine("Type \"push red\" to push the big red button and \"push blue\" to push the big blue button.");
         }
     }
 
