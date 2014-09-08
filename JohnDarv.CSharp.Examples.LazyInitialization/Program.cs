@@ -17,16 +17,23 @@ namespace JohnDarv.CSharp.Examples.LazyInitialization
             stopwatch.Start();
             Thing thing = new Thing();
             stopwatch.Stop();
-            Console.WriteLine("Time taken to create thing: {0}.", stopwatch.Elapsed.ToString(@"s\.ffffff"));
+            DisplayAccurateTimeInSeconds(stopwatch.Elapsed);
 
             stopwatch.Reset();
 
             stopwatch.Start();
             OptimalThing optimalThing = new OptimalThing();
             stopwatch.Stop();
-            Console.WriteLine("Time taken to create thing: {0}.", stopwatch.Elapsed.ToString(@"s\.ffffff"));
+            DisplayAccurateTimeInSeconds(stopwatch.Elapsed);
 
             Console.ReadLine();
+        }
+
+        static void DisplayAccurateTimeInSeconds(TimeSpan timespan)
+        {
+            string timeSpanFormat = @"s\.ffffff";
+
+            Console.WriteLine("Time taken to create thing: {0}.", timespan.ToString(timeSpanFormat));
         }
     }
 
