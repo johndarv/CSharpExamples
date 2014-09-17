@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
+# Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples", "JohnDarv.CSharp.Examples\JohnDarv.CSharp.Examples.csproj", "{DBA261FE-CE25-4B64-889F-2A7FF2630A00}"
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.LazyInitialization", "JohnDarv.CSharp.Examples.LazyInitialization\JohnDarv.CSharp.Examples.LazyInitialization.csproj", "{372B98D9-3180-4854-9F04-652D962F94F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.EventWaitHandles", "JohnDarv.CSharp.Examples.EventWaitHandles\JohnDarv.CSharp.Examples.EventWaitHandles.csproj", "{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.CustomConfigSection", "JohnDarv.CSharp.Examples.CustomConfigSection\JohnDarv.CSharp.Examples.CustomConfigSection.csproj", "{DE129C47-558C-4A91-BD2C-577DEAA2321B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.SelfHostedWebSite", "JohnDarv.CSharp.Examples.SelfHostedWebSite\JohnDarv.CSharp.Examples.SelfHostedWebSite.csproj", "{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnDarv.CSharp.Examples.OwinSelfHost", "JohnDarv.CSharp.Examples.OwinSelfHost\JohnDarv.CSharp.Examples.OwinSelfHost.csproj", "{7765E081-EDCC-4E13-AE73-3A44FD30C8DB}"
 EndProject
@@ -59,6 +63,14 @@ Global
 		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9D4B282-DC92-4DA5-BADD-BB403D0B7353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE129C47-558C-4A91-BD2C-577DEAA2321B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE129C47-558C-4A91-BD2C-577DEAA2321B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE129C47-558C-4A91-BD2C-577DEAA2321B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE129C47-558C-4A91-BD2C-577DEAA2321B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7765E081-EDCC-4E13-AE73-3A44FD30C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7765E081-EDCC-4E13-AE73-3A44FD30C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7765E081-EDCC-4E13-AE73-3A44FD30C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
