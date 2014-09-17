@@ -8,79 +8,38 @@ using Owin;
 
 namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
 {
-    public class Startup
+    /// <summary>
+    /// Because this class is not called 'Startup' we need an assembly attribute entry
+    /// in the AssemblyInfo.cs file that specifies that this is an Owin Startup class.
+    /// </summary>
+    public class CustomStartup
     {
-        private HtmlProducer htmlProducer;
+        private StuffProducer htmlProducer;
         private StringProducer stringProducer;
 
-        public Startup()
+        public CustomStartup()
         {
-            this.htmlProducer = new HtmlProducer();
+            this.htmlProducer = new StuffProducer();
             this.stringProducer = new StringProducer();
         }
 
         public void Configuration(IAppBuilder app)
         {
             // When we call the base address + /stringPage
-            app.Map(
-                "/stringPage",
-                (app2 =>
-                {
-                    app2.Use(InvokeStringResponder);
-                })
-            );
+            app.Map("/stringPage", UseTheStringResponder);
 
             // When we call the base address + /htmlPage
-            app.Map(
-                "/htmlPage",
-                (app2 =>
-                {
-                    // Use the InvokeHtmlResponder method to handle requests.
-                    app2.Use(InvokeHtmlResponder);
-                })
-            );
+            app.Map("/htmlPage", UseTheHtmlResponder);
         }
 
-        /// <summary>
-        /// Takes an Owin context and writes some html to the response.
-        /// Doesn't call the next function in the chain.
-        /// </summary>
-        /// <returns>Returns a Task that just returns 0.</returns>
-        private Task InvokeHtmlResponder(IOwinContext context, Func<Task> next)
+        private void UseTheHtmlResponder(IAppBuilder app)
         {
-            string message = RetrieveQueryString(context.Request.QueryString);
-
-            string html = this.htmlProducer.ProduceHtml(message);
-
-            context.Response.ContentType = "text/html";
-            context.Response.Write(html);
-
-            return Task.FromResult(0);
+            app.Use<HtmlMiddleware>();
         }
 
-        private Task InvokeStringResponder(IOwinContext context, Func<Task> next)
+        private void UseTheStringResponder(IAppBuilder app)
         {
-            string message = RetrieveQueryString(context.Request.QueryString);
-
-            string str = this.stringProducer.ProduceString(message);
-
-            context.Response.ContentType = "text/plain";
-
-            Task writeStringToResponseBody = context.Response.WriteAsync(str);
-
-            return writeStringToResponseBody;
-        }
-
-        private string RetrieveQueryString(QueryString queryString)
-        {
-            string message = string.Empty;
-
-            if (queryString.HasValue)
-            {
-                message = queryString.Value;
-            }
-
-            return message;
+            app.Use<StringMiddleware>();
         }
     }
 }

@@ -7,9 +7,9 @@ using Microsoft.Owin;
 
 namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
 {
-    public class HtmlProducer
+    public class StuffProducer
     {
-        public string ProduceHtml(string str)
+        public static string ProduceHtml(string str)
         {
             string message = "Hello World";
 
@@ -29,6 +29,11 @@ namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
                     "<p>" + message + "</p>" +
                 "</body>" +
                 "</html>";
+        }
+
+        public static string ProduceString(string message)
+        {
+            return "Hello, you entered: " + message + "!";
         }
     }
 }

@@ -34,3 +34,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+// This specifies which that the CustomStartup class is an Owin Startup class.
+[assembly: Microsoft.Owin.OwinStartup(typeof(JohnDarv.CSharp.Examples.SelfHostedWebSite.CustomStartup))]
