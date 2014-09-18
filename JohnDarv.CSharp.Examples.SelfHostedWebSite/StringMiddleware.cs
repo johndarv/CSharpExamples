@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Owin;
+using Newtonsoft.Json;
 
 namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
 {
@@ -18,10 +20,7 @@ namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
         {
             string message = UtilityMethods.RetrieveQueryString(context.Request.QueryString);
 
-            string html = StuffProducer.ProduceString(message);
-
-            context.Response.ContentType = "text/html";
-            context.Response.Write(html);
+            UtilityMethods.SetResponse(context, message, "application/json; charset=utf-8");
 
             return Task.FromResult(0);
         }

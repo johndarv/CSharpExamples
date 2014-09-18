@@ -18,10 +18,7 @@ namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
         {
             string message = UtilityMethods.RetrieveQueryString(context.Request.QueryString);
 
-            string html = StuffProducer.ProduceHtml(message);
-
-            context.Response.ContentType = "text/html";
-            context.Response.Write(html);
+            UtilityMethods.SetResponse(context, message, "text/html");
 
             // Just returning a simple task that returns 0.
             return Task.FromResult(0);
