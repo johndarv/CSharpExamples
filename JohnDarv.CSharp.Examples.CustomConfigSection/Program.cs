@@ -11,11 +11,13 @@ namespace JohnDarv.CSharp.Examples.CustomConfigSection
     {
         static void Main(string[] args)
         {
-            Type urlSectionType = typeof(UrlSection);
+            Type appInfoSectionType = typeof(AppInfoSection);
 
-            UrlSection configSection = (UrlSection)ConfigurationManager.GetSection("urls");
+            var appInfoSection = (AppInfoSection)ConfigurationManager.GetSection("appInfo");
 
-            Console.WriteLine(configSection.Url.Name);
+            Console.WriteLine(string.Format("App Name: {0}.", appInfoSection.Name));
+            Console.WriteLine(string.Format("Timeout: {0} seconds.", appInfoSection.TimeoutInSeconds));
+            Console.ReadLine();
         }
     }
 }
