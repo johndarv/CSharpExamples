@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
+namespace JohnDarv.CSharp.Examples.SelfHostedWebSiteAndApi
 {
     /// <summary>
     /// Because this class is not called 'Startup' we need an assembly attribute entry
@@ -14,15 +14,6 @@ namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
     /// </summary>
     public class CustomStartup
     {
-        private StuffProducer htmlProducer;
-        private StringProducer stringProducer;
-
-        public CustomStartup()
-        {
-            this.htmlProducer = new StuffProducer();
-            this.stringProducer = new StringProducer();
-        }
-
         public void Configuration(IAppBuilder app)
         {
             // When we call the base address + /stringPage

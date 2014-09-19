@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 
-namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
+namespace JohnDarv.CSharp.Examples.SelfHostedWebSiteAndApi
 {
     class Program
     {

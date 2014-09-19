@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Newtonsoft.Json;
 
-namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
+namespace JohnDarv.CSharp.Examples.SelfHostedWebSiteAndApi
 {
     public class UtilityMethods
     {

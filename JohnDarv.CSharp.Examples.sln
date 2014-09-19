@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lock", "Lock\Lock.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutexes", "Mutexes\Mutexes.csproj", "{CCA93B78-23FE-4055-A4DD-B8B1466F461D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostedWebSite", "SelfHostedWebSite\SelfHostedWebSite.csproj", "{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostedWebSiteAndApi", "SelfHostedWebSite\SelfHostedWebSiteAndApi.csproj", "{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Newtonsoft.Json;
 
-namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
+namespace JohnDarv.CSharp.Examples.SelfHostedWebSiteAndApi
 {
     public class StringMiddleware : OwinMiddleware
     {
@@ -22,7 +22,7 @@ namespace JohnDarv.CSharp.Examples.SelfHostedWebSite
 
             UtilityMethods.SetResponse(context, message, "application/json; charset=utf-8");
 
-            return Task.FromResult(0);
+            return Task.Factory.StartNew(() => { return; });
         }
     }
 }
