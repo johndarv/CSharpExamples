@@ -48,7 +48,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JohnDarv.CSharp.Examples.Mutexes\Mutexes.csproj">
+    <ProjectReference Include="..\Mutexes\Mutexes.csproj">
       <Project>{cca93b78-23fe-4055-a4dd-b8b1466f461d}</Project>
       <Name>Mutexes</Name>
     </ProjectReference>
