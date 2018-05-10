@@ -1,4 +1,4 @@
-﻿namespace SwitchAndIfAndAlternatives
+﻿namespace JohnDarv.CSharp.Examples.SwitchStatements
 {
     using System;
     using System.Collections.Generic;
