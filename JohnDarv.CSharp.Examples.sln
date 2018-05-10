@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDomains", "AppDomains\AppDomains.csproj", "{A2C6CFAA-F977-4B8B-8CD4-803B57CF123B}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutexes", "Mutexes\Mutexes.csproj", "{CCA93B78-23FE-4055-A4DD-B8B1466F461D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostedWebSiteAndApi", "SelfHostedWebSite\SelfHostedWebSiteAndApi.csproj", "{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchStatements", "SwitchStatements\SwitchStatements.csproj", "{F5C44031-951F-44DA-AF05-08D48CD53FCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,8 +65,15 @@ Global
 		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31A626E9-986B-4B37-AC8E-AEFD9B4F8009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C44031-951F-44DA-AF05-08D48CD53FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C44031-951F-44DA-AF05-08D48CD53FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C44031-951F-44DA-AF05-08D48CD53FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C44031-951F-44DA-AF05-08D48CD53FCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43198D6B-554C-4D75-A07C-7D4077154FF0}
 	EndGlobalSection
 EndGlobal
